@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import minhaLogo from '../assets/logo.png';
 
 const NAV_LINKS = [
   { href: '#servicos', label: 'Serviços' },
@@ -33,11 +34,15 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2.5 group" aria-label="The Pet Shop Roots — início">
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-moss-600 text-white text-xl shadow-md transition-transform duration-200 group-hover:scale-110">
-            🌿
+            <img
+              src={minhaLogo}
+              alt="Logo do The Pet Shop Roots"
+              className="h-full w-full object-cover"
+            />  
           </span>
           <span className={`font-display text-lg font-bold leading-tight transition-colors duration-300 ${scrolled ? 'text-moss-800' : 'text-white drop-shadow'}`}>
             The Pet Shop<br />
-            <span className="text-terra-500">Roots</span>
+            <span className="text-terra-600">Roots</span>
           </span>
         </a>
 
